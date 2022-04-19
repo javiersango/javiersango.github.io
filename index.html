@@ -177,3 +177,202 @@
 </body>
 
 </html>
+
+<style>
+    * {
+    padding: 0em;
+    margin: 0em;
+    font-family: 'BIZ UDPMincho', serif;
+}
+/*Body--------------------------------------------------------------*/
+.grid-container {
+    background: linear-gradient(30deg, #000000, #313c46, #0000ff,#0000ff,#313c46,#000000);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 4em auto 4em;
+    gap: 0.5em;
+    text-align: justify;
+   
+}
+
+.grid-container>* {
+    padding: 10px;
+}
+
+
+/*header--------------------------------------------------------*/
+header {
+    grid-column: 1/ span 3;
+    grid-row: 1em;
+    background: linear-gradient(30deg, #000000, #313c46, #0000ff);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+h1 {
+    color: white; 
+}
+/*Nav-----------------------------------------------------------*/
+nav {
+    grid-row: 2 / 4;
+    background: linear-gradient(30deg, #0000ff, #313c46, #000000);
+   text-align: center;
+    border-radius: 1em;
+}
+
+/*Nav opcion*/
+.opcion {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+/*link-----------------------------------------------------------*/
+ul {
+    margin-top: 40px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: lightseagreen;
+}
+a:active {
+    color: green;
+}
+/*Section-----------------------------------------------------------*/
+section {
+    background: linear-gradient(25deg,  #0000ff,#313c46,#000000,#000000,#313c46,#0000ff);
+    border-radius: 1em;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 40em;
+    text-align: center;
+  
+    
+}
+.logo{
+   
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      
+        border-radius: 1em;
+       
+    
+}
+.video{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgba(128, 128, 128, 20%);
+    border-radius: 1em;
+   
+}
+/*Aside-------------------------------------------------------------*/
+aside {
+    background: linear-gradient(30deg, #000000, #313c46, #0000ff);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 1em;
+   
+}
+
+/*Section img--------------------------------------------------------*/
+img {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+
+}
+/*Footer--------------------------------------------------------------*/
+footer {
+    grid-column: 2 / 4;
+    grid-row: 1em;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(30deg, #0000ff, #313c46, #000000);
+}
+footer p {
+    background: linear-gradient(100deg, #0f1011, #455973);
+    width: 40em;
+    margin: -10px;
+    border-bottom-right-radius: 15em;
+    padding: 0.2em;
+}
+/*-------------------------------------------------------------------*/
+/* Dispositivos pequeños (tabletas verticales y teléfonos grandes, 480px y más)*/
+@media only screen and (max-width: 480px) {
+
+    nav {
+        grid-column: 1 / 4;
+        grid-template-rows: 1em;
+    }
+
+    section {
+        grid-column: 1 / 4;
+    }
+
+    aside {
+        grid-column: 1 / 4;
+    }
+
+    .grid-container {
+        grid-template-rows: repeat(5, auto);
+
+    }
+
+
+}
+
+/* Dispositivos medianos (tabletas horizontales, 481px y 768 px y más)*/
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    nav {
+        grid-column: 1 / 4;
+    }
+
+    section {
+        grid-column: 1 / 3;
+    }
+
+    aside {
+        grid-column: 3 / 4;
+
+    }
+
+    .grid-container {
+        grid-template-rows: repeat(4, auto);
+
+    }
+}
+
+/* Dispositivos extragrandes (portátiles y equipos de escritorio grandes, 1200 px y más) */
+@media only screen and (min-width: 1200px) {
+    section {
+        background-color: rgb(98, 157, 212);
+    }
+
+    aside {
+        background-color: rgb(71, 52, 142);
+    }
+
+    nav {
+        background-color: #80005c;
+    }
+
+}
+</style>
